@@ -34,8 +34,10 @@ List the key-value pairs and explain what they mean
 
 
 6. The tutorial walks you through calculating the Normalized Difference Vegetation Index. Modify your function to calculate the Modified Normalized Difference Water Index, or NDWI. This formula uses the Green and SWIR bands which, for Landsat 8, are Band 3 and Band 6 respectively: `mNDWI = (Green - SWIR)/(Green+SWIR)`. 
-6a. Write a function `calc_ndwi` and include it in your `landsat.py` file. 
-6a. Take a screenshot of the overview showing the mNDWI, naming it `screencap_mndwi.png`
+
+    a. Write a function `calc_ndwi` and include it in your `landsat.py` file. 
+    
+    b. Take a screenshot of the overview showing the mNDWI, naming it `screencap_mndwi.png`
 
 7. What is `pyproj` used for? Is there another library that you have used that could accomplish this function? 
 Bonus: Include code for projecting a point using a library other than `pyproj`
