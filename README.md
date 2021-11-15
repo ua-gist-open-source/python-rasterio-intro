@@ -44,7 +44,7 @@ Bonus: Include code for projecting a point using a library other than `pyproj`
 
 8. How can you use `rasterio` to translate between image coordinates and real world coordinates?
 
-9. Include a screenshot showing a plot of the NDVI difference plot, but make the plot an individual plot (not a 1x3) and change the color map to anything we haven't used already in this tutorial. See [this tutorial for examples](https://matplotlib.org/stable/tutorials/colors/colormaps.html).
+9. Include a screenshot showing a plot of the NDVI difference plot, but make the plot an individual plot (not a 1x3) and change the color map to anything we haven't used already in this tutorial. Save it as `screencap_ndvi_difference.png`. See [this tutorial for examples](https://matplotlib.org/stable/tutorials/colors/colormaps.html).
 
 10. Finally, reproject this to California State Plane, Zone 3, which is a local CRS that managers might use this with. Include this in your `landsat.py` script.
 
@@ -56,6 +56,7 @@ You should have answered the questions above (inline with the README.md is best)
 
 - `README.md`
 - `screencap_mndwi.png`
+- `screencap_ndvi_difference.png`
 - `landsat.py` 
  
 Include those in a branch named `rasterio` and submit a `Pull request` to merge with `master`. Do not merge!
