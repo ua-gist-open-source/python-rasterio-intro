@@ -1,0 +1,49 @@
+name: Check for required files
+
+on:
+  push:
+    branches: [ rasterio ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check screencap_mndwi.png
+        id: check_1_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "screencap_mndwi.py"
+
+      - name: Required files exist
+        if: steps.check_1_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'screencap_mndwi.py', is missing
+          exit 1
+          
+      - name: Check screencap_ndvi_difference.png
+        id: check_2_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "screencap_ndvi_difference.png"
+
+      - name: Required files exist
+        if: steps.check_2_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'screencap_ndvi_difference.png', is missing
+          exit 1
+          
+          
+      - name: Check landsat.py
+        id: check_3_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "landsat.py"
+
+      - name: Required files exist
+        if: steps.check_3_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'landsat.py', is missing
+          exit 1
+          
